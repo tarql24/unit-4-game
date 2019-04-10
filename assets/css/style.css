@@ -1,3 +1,7 @@
+.container {
+  background: url("../images/background1.png");
+}
+
 /* Title */
 .title {
   font-size: 54px;
