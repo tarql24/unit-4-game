@@ -2,33 +2,33 @@ var wins = 0;
 var losses = 0;
 var userTotal = 0;
 
-var mainNum = Math.floor(Math.random() * 50) + 19;
+var mainNum = Math.floor(Math.random() * 102) + 19;
 $("#main-number").html("<h1>" + mainNum + "</h1>");
 console.log(mainNum);
 
-var num1 = Math.floor(Math.random() * 11) + 1;
-var num2 = Math.floor(Math.random() * 11) + 1;
-var num3 = Math.floor(Math.random() * 11) + 1;
-var num4 = Math.floor(Math.random() * 11) + 1;
+var num1 = Math.floor(Math.random() * 12) + 1;
+var num2 = Math.floor(Math.random() * 12) + 1;
+var num3 = Math.floor(Math.random() * 12) + 1;
+var num4 = Math.floor(Math.random() * 12) + 1;
 console.log(num1);
 console.log(num2);
 console.log(num3);
 console.log(num4);
 
 function reset() {
-  mainNum = Math.floor(Math.random() * 29) + 19;
+  mainNum = Math.floor(Math.random() * 102) + 19;
   $("#main-number").html("<h1>" + mainNum + "</h1>");
-  var num1 = Math.floor(Math.random() * 11) + 1;
-  var num2 = Math.floor(Math.random() * 11) + 1;
-  var num3 = Math.floor(Math.random() * 11) + 1;
-  var num4 = Math.floor(Math.random() * 11) + 1;
+  var num1 = Math.floor(Math.random() * 12) + 1;
+  var num2 = Math.floor(Math.random() * 12) + 1;
+  var num3 = Math.floor(Math.random() * 12) + 1;
+  var num4 = Math.floor(Math.random() * 12) + 1;
   userTotal = 0;
-  $("#user-number").html("<h2>" + userTotal + "</h2>");
+  $("#my-number").html("<h2>" + userTotal + "</h2>");
 }
 
 function win() {
   wins++;
-  $("#wins").html("<p>Wins: " + wins + "</p>");
+  $("#wins").html("<p><b>Wins:</b> " + wins + "</p>");
   reset();
 }
 //addes the losses to the userTotal
@@ -40,7 +40,7 @@ function loss() {
 
 $("#num1").on("click", function() {
   userTotal += num1;
-  $("#user-number").html("<h2>" + userTotal + "</h2>");
+  $("#my-number").html("<h2>" + userTotal + "</h2>");
 
   if (userTotal == mainNum) {
     win();
@@ -51,7 +51,7 @@ $("#num1").on("click", function() {
 
 $("#num2").on("click", function() {
   userTotal += num2;
-  $("#user-number").html("<h2>" + userTotal + "</h2>");
+  $("#my-number").html("<h2>" + userTotal + "</h2>");
 
   if (userTotal == mainNum) {
     win();
@@ -62,7 +62,7 @@ $("#num2").on("click", function() {
 
 $("#num3").on("click", function() {
   userTotal += num3;
-  $("#user-number").html("<h2>" + userTotal + "</h2>");
+  $("#my-number").html("<h2>" + userTotal + "</h2>");
 
   if (userTotal == mainNum) {
     win();
@@ -73,7 +73,7 @@ $("#num3").on("click", function() {
 
 $("#num4").on("click", function() {
   userTotal += num4;
-  $("#user-number").html("<h2>" + userTotal + "</h2>");
+  $("#my-number").html("<h2>" + userTotal + "</h2>");
 
   if (userTotal == mainNum) {
     win();
