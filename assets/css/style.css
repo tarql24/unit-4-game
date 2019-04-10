@@ -47,10 +47,14 @@
 .crystal-box {
   clear: both;
 }
+
+img {
+  width: 150px;
+}
 /*Your Score text  */
 .your-score {
   clear: both;
-  width: 300px;
+  width: 290px;
   background: lightblue;
   font-size: 20px;
   padding: 10px 5px;
@@ -59,7 +63,7 @@
 }
 /*My Number Box  */
 .my-number-box {
-  width: 270px;
+  width: 260px;
   background: lightblue;
   height: 120px;
   padding: 10px 20px;
